@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --background: hsl(240deg, 23%, 9%);
+  --secondary: hsl(115deg, 54%, 76%);
+  --accent: hsl(267deg, 84%, 81%);
+  --text: hsl(226deg, 64%, 88%);
+  --foreground: hsl(237deg, 16%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  padding: 1rem;
+}
+
+h1 {
+  color: var(--accent);
+  text-align: center;
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+form div {
+  position: relative;
+}
+
+#searchBar {
+  border: 1px solid var(--accent);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background: none;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  outline: none;
+  caret-color: var(--accent);
+}
+
+form div button {
+  display: flex;
+  border: none;
+  border-radius: 1rem;
+  background: none;
+  background-color: var(--accent);
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.wrapper img {
+  border-radius: 1rem;
+  max-width: 250px;
+  aspect-ratio: 2 / 3;
+  transition: transform 200ms ease;
+}
+
+.wrapper img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+  .wrapper img {
+    width: calc(100% / 4 - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper img {
+    width: calc(100% / 3 - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  form div {
+    max-width: 75%;
+  }
+  #searchBar {
+    max-width: 100%;
+  }
+  .wrapper img {
+    width: calc(100% / 2 - 1rem);
+  }
+}
