@@ -21,7 +21,7 @@ const makeImages = (data) => {
   for (let item of data) {
     if (item.show.image) {
       const img = document.createElement("img");
-      img.src = item.show.image.original;
+      img.src = item.show.image.medium;
       outputBox.append(img);
     }
   }
